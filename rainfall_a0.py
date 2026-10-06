@@ -1,3 +1,5 @@
+
+# Variante 1: Mit Exception Handling
 def exc (xy):
     summe = 0
     count = 0
@@ -18,14 +20,16 @@ def exc (xy):
         print("Es befinden sich keine positiven Zahlen vor -999.")
         return None
 
-#Testläufe
+    finally:
+        print("Durchlauf Variante 1 beendet")
 
+#Testläufe
 
 x = [2, -5, 4,2, -999, 10, -5]
 y = [-999, 5, 2, 3,]
 
-print ("Test 'x':")
+print ("Test x:")
 exc(x)
 
-print("Test 'y':")
+print("Test y:")
 exc(y)
