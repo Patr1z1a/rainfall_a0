@@ -44,6 +44,9 @@ def el (a):
         print(f"Das Ergebnis ist {ergebnis}")
         return ergebnis
 
+#Variante 3: Lamda
+ exc = lambda xy: sum(xy[:xy.index(-999)]) / len(xy[:xy.index(-999)]) if xy else 0.0
+
 #Testläufe
 
 x = [2, -5, 2,2, -999, 10, -5]
