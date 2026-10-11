@@ -45,7 +45,8 @@ def el (a):
         return ergebnis
 
 #Variante 3: Lamda
-exc = lambda xy: sum(xy[:xy.index(-999)]) / len(xy[:xy.index(-999)]) if xy else 0.0
+exc2 = lambda xy: (s := [x for x in xy[: xy.index(-999)] if x >= 0], (sum(s) / len(s) if s else 0.0))[1]
+
 
 #Testläufe
 
