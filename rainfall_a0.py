@@ -1,3 +1,6 @@
+xy = [2, -5, 2,2, -999, 10, -5]
+x =  [5, 60, 30, 4, -900, -999]
+y = [-999, 5, 2, 3,]
 
 # Variante 1: Mit Exception Handling
 def exc (xy):
@@ -23,7 +26,7 @@ def exc (xy):
     finally:
         print("Durchlauf Variante 1 beendet")
 
-#Variante 2: If-Else | kein Break
+#Variante 2: If-Else 
 def el (a):
     summe = 0
     count = 0
@@ -43,11 +46,28 @@ def el (a):
         ergebnis = summe/count 
         print(f"Das Ergebnis ist {ergebnis}")
         return ergebnis
+#Variante 3: List comprehension
+def lis (c):
+    f = c.index(-999)
+    s = c[:f]
+    s = [i for i in s if i >= 0]
+    if len(s) == 0:
+        return None
+    erg = sum(s) / len(s)
+    return erg
+
+#Variante 4: Lamda
+exc2 = lambda xy: (
+    s := [i for i in xy[: xy.index(-999)] if i >= 0], 
+    sum(s) / len(s) if s else None
+)[1]
+
+print(exc2(xy))
 
 #Testlauf Variante 1
 
-x = [2, -5, 2,2, -999, 10, -5]
-y = [-999, 5, 2, 3,]
+
+
 
 print ("Test x:")
 exc(x)
