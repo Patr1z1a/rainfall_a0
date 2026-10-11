@@ -23,6 +23,27 @@ def exc (xy):
     finally:
         print("Durchlauf Variante 1 beendet")
 
+#Variante 2: If-Else | kein Break
+def el (a):
+    summe = 0
+    count = 0
+
+    for i in a:
+        if i == -999:
+            break
+        if i >= 0: 
+            summe += i
+            count += 1
+
+    if count == 0: 
+       print("only Chuck Norris") 
+       return None
+
+    else:
+        ergebnis = summe/count 
+        print(f"Das Ergebnis ist {ergebnis}")
+        return ergebnis
+
 #Testläufe
 
 x = [2, -5, 2,2, -999, 10, -5]
@@ -33,3 +54,7 @@ exc(x)
 
 print("Test y:")
 exc(y)
+
+print("Test Variante 2")
+el(x)
+el(y)
