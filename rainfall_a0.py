@@ -62,22 +62,20 @@ exc2 = lambda xy: (
     sum(s) / len(s) if s else None
 )[1]
 
-print(exc2(xy))
-
 #Testlauf Variante 1
-
-
-
-
-print ("Test x:")
+print ("Test Var1:")
 exc(x)
-
-print("Test y:")
 exc(y)
 
-print("Test Variante 2")
+print("Test Var2")
 el(x)
 el(y)
 
-#Testlauf Variante 2 
+print("Test Var3")
+print(lis(x))
+print(lis(y))
 
+print("Test Var4")
+print(exc2(x))
+print(exc2(y))
+print(exc2(xy))
