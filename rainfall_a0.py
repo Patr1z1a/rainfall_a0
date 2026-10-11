@@ -44,7 +44,7 @@ def el (a):
         print(f"Das Ergebnis ist {ergebnis}")
         return ergebnis
 
-#Testläufe
+#Testlauf Variante 1
 
 x = [2, -5, 2,2, -999, 10, -5]
 y = [-999, 5, 2, 3,]
@@ -58,3 +58,6 @@ exc(y)
 print("Test Variante 2")
 el(x)
 el(y)
+
+#Testlauf Variante 2 
+
