@@ -36,7 +36,7 @@ def el (a):
             count += 1
 
     if count == 0: 
-       print("only Chuck Norris") 
+       print("only Chuck Norris can divide by 0") 
        return None
 
     else:
