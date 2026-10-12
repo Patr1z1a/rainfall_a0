@@ -14,11 +14,12 @@ def exc (xy):
             summe += i
             count += 1
 
-    try: 
-        return summe / count
+    try:
+        t = summe / count 
+        return t
 
     except ZeroDivisionError: 
-        print("Es befinden sich keine positiven Zahlen vor -999.")
+        print(f"Keine positiven Zahlen in d. Liste {xy}")
         return None
 
 #Variante 2: If-Else 
@@ -38,7 +39,8 @@ def el (a):
        return None
 
     else:
-        return summe / count
+        p = summe / count
+        return p
     
 #Variante 3: List comprehension
 def lis (c):
