@@ -15,16 +15,11 @@ def exc (xy):
             count += 1
 
     try: 
-        ergebnis = summe/count
-        print(f"Das Ergebnis ist {ergebnis}")
-        return ergebnis 
+        return summe / count
 
     except ZeroDivisionError: 
         print("Es befinden sich keine positiven Zahlen vor -999.")
         return None
-
-    finally:
-        print("Durchlauf Variante 1 beendet")
 
 #Variante 2: If-Else 
 def el (a):
@@ -43,9 +38,8 @@ def el (a):
        return None
 
     else:
-        ergebnis = summe/count 
-        print(f"Das Ergebnis ist {ergebnis}")
-        return ergebnis
+        return summe / count
+    
 #Variante 3: List comprehension
 def lis (c):
     f = c.index(-999)
@@ -62,20 +56,22 @@ exc2 = lambda xy: (
     sum(s) / len(s) if s else None
 )[1]
 
-#Testlauf Variante 1
+#Testbereich
 print ("Test Var1:")
-exc(x)
-exc(y)
+
+print("Liste x:",exc(x))
+print("Liste y:", exc(y))
+
 
 print("Test Var2")
-el(x)
-el(y)
+print("Liste x:", el(x))
+print("Liste y:", el(y))
 
 print("Test Var3")
-print(lis(x))
-print(lis(y))
+print("Liste x:",lis(x))
+print("Liste y:",lis(y))
 
 print("Test Var4")
-print(exc2(x))
-print(exc2(y))
-print(exc2(xy))
+print("Liste x:",exc2(x))
+print("Liste y:",exc2(y))
+print("Liste xy:",exc2(xy))
